@@ -11,6 +11,7 @@ public:
         }
         return true;
     }
+    
     bool validPalindrome(string s) {
         int left = 0;
         int right = s.length()-1;
