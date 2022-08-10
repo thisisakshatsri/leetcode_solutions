@@ -23,9 +23,6 @@ public:
         return NULL;
     }
     TreeNode* sortedArrayToBST(vector<int>& nums) {
-        int left = 0;
-        int right = nums.size()-1;
-        TreeNode* ans = bst(nums, left, right);
-        return ans;
+        return bst(nums, 0, nums.size()-1);
     }
 };
