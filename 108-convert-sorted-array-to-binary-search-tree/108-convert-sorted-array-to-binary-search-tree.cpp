@@ -12,7 +12,7 @@
 class Solution {
 public:
     TreeNode *bst(vector<int> v, int left, int right) {
-        
+        if(left > right) return NULL;
         if(left <= right) {
             int mid = left + (right - left) / 2;
             TreeNode* root = new TreeNode(v[mid]);
