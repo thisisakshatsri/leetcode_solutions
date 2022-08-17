@@ -4,6 +4,8 @@ public:
         vector<int> v;
         stack<int> s;
         int n = nums2.size();
+        unordered_map<int, int> mp;
+        
         
         for(int i = n-1; i>=0; i--) {
             if(s.size() == 0) v.push_back(-1);
@@ -17,15 +19,14 @@ public:
             }
             s.push(nums2[i]);
         }
-        reverse(v.begin(), v.end());
         
+        reverse(v.begin(), v.end());
+        for(int i=0; i<v.size(); i++) {
+            mp[nums2[i]] = v[i];
+        }
         vector<int> res;
-        for(int i=0; i<nums1.size(); i++) {
-            for(int j=0; j<nums2.size(); j++){
-                if(nums1[i] == nums2[j]){
-                    res.push_back(v[j]);
-                }
-            }
+        for(auto x: nums1) {
+            res.push_back(mp[x]);
         }
         return res;
     }
