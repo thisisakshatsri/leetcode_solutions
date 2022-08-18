@@ -12,8 +12,8 @@ public:
         for(auto x: mp){
             freq.push_back(x.second);
         }
-        sort(freq.begin(), freq.end());
-        reverse(freq.begin(), freq.end());
+        sort(freq.begin(), freq.end(), greater<int>());
+        
         
         int sum = 0;
         int cnt = 0;
