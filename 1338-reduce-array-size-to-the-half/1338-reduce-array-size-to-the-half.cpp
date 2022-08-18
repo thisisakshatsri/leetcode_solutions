@@ -10,7 +10,7 @@ public:
         }
         
         for(auto x: mp){
-            freq.push_back(x.second);
+            freq.emplace_back(x.second);
         }
         sort(freq.begin(), freq.end(), greater<int>());
         
