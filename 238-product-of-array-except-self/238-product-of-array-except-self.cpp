@@ -1,22 +1,22 @@
 class Solution {
 public:
     vector<int> productExceptSelf(vector<int>& nums) {
-        if(nums.size() == 0) return{0};
-        int len = nums.size();
-        vector<int> res(len);
-        int temp = 1;
+        vector<int> v;
+        int n = nums.size();
         
-        for(int i=0; i<len; i++) {
-            res[i] = temp;
+        int temp = 1;
+        int pro = 1;
+        for(int i=0; i<n; i++){
+            v.push_back(temp);
             temp *= nums[i];
         }
         
         temp = 1;
         
-        for(int i=len-1; i>=0; i--) {
-            res[i] *= temp;
-            temp *= nums[i];
+        for(int i=n-1; i>=0; i--) {
+            v[i]*=temp;
+            temp*=nums[i];
         }
-        return res;
+        return v;
     }
 };
