@@ -7,7 +7,7 @@ public:
         int temp = 1;
         int pro = 1;
         for(int i=0; i<n; i++){
-            v.push_back(temp);
+            v.emplace_back(temp);
             temp *= nums[i];
         }
         
