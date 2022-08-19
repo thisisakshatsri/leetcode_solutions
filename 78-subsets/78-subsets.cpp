@@ -6,9 +6,9 @@ public:
             ans.push_back(subset);
             return;
         }
-        //ith element in subset
+        //ith element in the subset
         solve(subset, i+1, nums);
-        //ith element not in subset
+        //ith element not in the subset
         subset.push_back(nums[i]);
         solve(subset, i+1, nums);
         subset.pop_back();
