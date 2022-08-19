@@ -1,6 +1,8 @@
 class Solution {
 public:
     int maxArea(vector<int>& height) {
+        if(height.size() == 0) return 0;
+        
         int n = height.size();
         int start = 0;
         int end = n-1;
