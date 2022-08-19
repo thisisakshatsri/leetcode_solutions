@@ -1,13 +1,13 @@
 class Solution {
 public:
     vector<int> productExceptSelf(vector<int>& nums) {
-        vector<int> v;
         int n = nums.size();
+        vector<int> v(n);
         
         int temp = 1;
         int pro = 1;
         for(int i=0; i<n; i++){
-            v.emplace_back(temp);
+            v[i] = temp;
             temp *= nums[i];
         }
         
