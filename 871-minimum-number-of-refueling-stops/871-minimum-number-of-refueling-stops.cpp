@@ -1,7 +1,7 @@
 class Solution {
 public:
     int minRefuelStops(int target, int startFuel, vector<vector<int>>& stations) {
-        
+        if(target == 0) return 0;
         
         int n = stations.size();
         int totalFuel = 0, currentStation = 0, count = 0;
