@@ -14,7 +14,7 @@ public:
         ListNode *slow = head;
         ListNode *fast = head;
         
-        while(fast and fast->next){
+        while(fast and fast->next) {
             slow = slow->next;
             fast = fast->next->next;
         }
@@ -23,17 +23,15 @@ public:
         ListNode *curr = slow;
         
         while(curr) {
-            ListNode *temp = curr->next;
+            ListNode *next = curr->next;
             curr->next = prev;
             prev = curr;
-            curr = temp;
+            curr = next;
         }
-        
-        ListNode *h1 = head;
-        while(prev) {
-            if(h1->val != prev->val)
+        while(prev){
+            if(head->val != prev->val)
                 return false;
-            h1 = h1->next;
+            head = head->next;
             prev = prev->next;
         }
         return true;
