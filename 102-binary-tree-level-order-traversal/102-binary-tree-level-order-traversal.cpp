@@ -26,7 +26,7 @@ public:
                 if(node->right != NULL) q.push(node->right);
                 level.emplace_back(node->val);
             }
-            ans.emplace_back(level);
+            ans.push_back(level);
         }
         return ans;
     }
